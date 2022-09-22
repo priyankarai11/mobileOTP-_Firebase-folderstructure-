@@ -7,7 +7,7 @@ import { useStyles } from "./style";
 
 function WelcomePage({ logOut }) {
   const classes = useStyles();
-  const userRole = localStorage.getItem("Role");
+  const userRole = localStorage.getItem("role");
 
   return (
     <div className={classes.centered}>

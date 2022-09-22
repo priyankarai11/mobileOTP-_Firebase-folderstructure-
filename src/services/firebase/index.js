@@ -23,7 +23,6 @@ const signInWithMobileNumber = (phoneNumber, setShowOtp) => {
   promise
     .then((message) => console.log(message))
     .catch((message) => console.log(message));
-  return promise;
 };
 
 function verifyOtp(otp, navigate) {
@@ -45,7 +44,6 @@ function verifyOtp(otp, navigate) {
   promise
     .then((message) => console.log(message))
     .catch((message) => console.log(message));
-  return promise;
 }
 
 export { signInWithMobileNumber, verifyOtp, firebaseVerifier, showOtp };
