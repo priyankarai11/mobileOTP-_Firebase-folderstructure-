@@ -3,7 +3,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 export const useStyles = makeStyles({
-  
   centered: {
     background: "linear-gradient(to right top,#A8D930B2, #A8D93000)",
     height: 720,
@@ -16,6 +15,7 @@ export const useStyles = makeStyles({
     maxWidth: 400,
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: 15,
     margin: "auto",
     top: 105,
     padding: 3,
@@ -41,14 +41,16 @@ export const useStyles = makeStyles({
   ellipse_11: {
     position: "absolute",
     top: 0,
-    width: 373,
-    right: 33,
+    width: 354,
+    borderRadius: 15,
+    right: 52,
     // zIndex:-1,
   },
 
   ellipse_2: {
     right: 0,
     width: 300,
+    borderRadius: 10,
     // zIndex: -1,
     position: "absolute",
     top: 0,
@@ -66,14 +68,22 @@ export const useStyles = makeStyles({
   },
 
   inputField: {
-    width: 285,
-    height: 20,
-    border: "0.5px solid #14224A",
+    width: "76%",
+    height: 40,
     borderRadius: 8,
-    padding: 10,
-    "&::-webkit-inner-spin-button": {
-      "-webkit-appearance": "none",
-      margin: 0,
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "green",
+      },
+    },
+    "& .MuiOutlinedInput-input": {
+      padding: 12,
+      fontSize: 14,
+    },
+    "& .MuiFormHelperText-contained": {
+      marginLeft: 2,
+      fontSize: 14,
+      color: "#e74c3c",
     },
   },
 
@@ -106,6 +116,7 @@ export const useStyles = makeStyles({
   },
 
   getotpgirlImage: {
+    position: "inherit",
     height: 216,
   },
 

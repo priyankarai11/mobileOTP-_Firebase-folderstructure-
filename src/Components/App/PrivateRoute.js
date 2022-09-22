@@ -1,14 +1,14 @@
-
 /** @format */
 
-import { Navigate } from "react-router";
-import { db } from "../LoginPage/firebase";
+// /** @format */
 
-function PrivateRoute({ children }) {
-    const number = sessionStorage.getItem('num')
-    const auth = sessionStorage.getItem("canLogin")
-    return number && auth  ? children : <Navigate replace to='/login' /> 
-   
+import React from "react";
+import { Navigate , Outlet} from "react-router";
+
+function PrivateRoute() {
+  const auth = localStorage.getItem("checkNumber");
+  return auth ? <Outlet/> : <Navigate replace to="/" />
+
 }
 
-export default PrivateRoute;
+export { PrivateRoute };

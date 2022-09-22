@@ -1,10 +1,8 @@
 /** @format */
 
-import firebase from "firebase/app"
-import 'firebase/auth'
-// import "firebase/firestore";
-import {collection,getDocs} from "firebase/firestore"
-import "firebase/database"
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDDMP6LHSmnKJxnVSSTLXlkzHJ1T7bbiFU",
@@ -15,11 +13,9 @@ var firebaseConfig = {
   appId: "1:880777936774:web:3635fa9672c985e20bf607",
 };
 
-
-
 firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
+let auth = firebase.auth();
 
-export  {firebase,db}
-
+export { firebase, db, auth };

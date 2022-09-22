@@ -1,16 +1,19 @@
 /** @format */
 
+// /** @format */
+
 import React from "react";
 import { Navigate } from "react-router";
-import LoginPage from "../LoginPage/LoginPage";
+import LoginPage from "../../feature/authentication/Login";
 
-function  PublicRoute() {
-  const number = sessionStorage.getItem("num");
-  console.log(number);
-  if (number && number !== undefined) {
-    sessionStorage.clear();
-    return <Navigate replace to="/login" />;
-  } else return <LoginPage />;
-}
+const PublicRoute = () => {
+  const auth = localStorage.getItem("checkNumber");
 
-export default PublicRoute;
+  return auth && auth !== undefined ? (
+    <Navigate replace to="/dashboard" />
+  ) : (
+    <LoginPage />
+  );
+};
+
+export { PublicRoute };

@@ -1,40 +1,28 @@
 /** @format */
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginPage from "../LoginPage/LoginPage";
-import Otp from "../OTP_Page/Otp";
-import PrivateRoute from "./PrivateRoute";
-import PublicRoute from "./PublicRoute";
-import NewUser from "../NewUser/NewUser";
-import NotFoundPage from "../NotFound/NotFound";
+import LoginPage from "../../feature/authentication/Login";
+import Dashboard from "../../feature/home/Dashboard";
+import { PrivateRoute } from "./privateRoute";
+import { PublicRoute } from "./publicRoute";
+import NotFoundPage from "../notFound/notFound";
+import NewUser from "../newUser";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <LoginPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/NewUser"
-          element={
-              <NewUser />
-          }
-        />
-        <Route
-          path="/getOTP"
-          element={
-            <PrivateRoute>
-              <Otp />
-            </PrivateRoute>
-          }
-        />
+        <Route element={<PublicRoute />}>
+          <Route element={<LoginPage />} path="/" />
+        </Route>
+
+        <Route element={<PrivateRoute />}>
+          <Route element={<Dashboard />} path="/dashboard" />
+        </Route>
+
         <Route path="/*" element={<NotFoundPage />} />
+
+        {/* <Route path="/NewUser" element={<NewUser />} /> */}
       </Routes>
     </BrowserRouter>
   );
