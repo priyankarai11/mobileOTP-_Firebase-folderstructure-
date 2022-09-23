@@ -3,7 +3,6 @@ import { firebase } from "./config";
 import { initializeRecaptcha } from "../recaptcha";
 
 let firebaseVerifier = null;
-let showOtp = false;
 
 const signInWithMobileNumber = (phoneNumber, setShowOtp) => {
   const promise = new Promise((resolve, reject) => {
@@ -46,4 +45,4 @@ function verifyOtp(otp, navigate) {
     .catch((message) => console.log(message));
 }
 
-export { signInWithMobileNumber, verifyOtp, firebaseVerifier, showOtp };
+export { signInWithMobileNumber, verifyOtp, firebaseVerifier };
