@@ -15,7 +15,7 @@ function Index() {
   const [loading, setLoading] = useState(false);
   const [userRole, setUserRole] = useState("");
   const [showOtp, setShowOtp] = useState(false);
-  
+
   const handleChange = (e) => {
     e.preventDefault();
     setMobileNumber(e.target.value);

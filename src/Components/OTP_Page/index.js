@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React from "react";
 import { Box, Button } from "@material-ui/core";
 import OtpInput from "react-otp-input";
 import Ellipse_1 from "../../assets/images/ellipse_1.svg";
