@@ -7,7 +7,7 @@ import Login from "../../../components/loginPage";
 import Otp from "../Otp";
 import { signInWithMobileNumber } from "../../../services/firebase";
 import { firebase, db } from "../../../services/firebase/config";
-import { PHONE_ERROR } from "../../../constants";
+import { PHONE_ERROR,TOAST } from "../../../constants";
 
 function Index() {
   const [mobileNumber, setMobileNumber] = useState("");
@@ -63,7 +63,7 @@ function Index() {
     } else {
       setLoading(false);
       setTimeout(() => {
-        toast.error("user not found", {
+        toast.error(TOAST, {
           position: toast.POSITION.TOP_CENTER,
         });
       }, 2000);
