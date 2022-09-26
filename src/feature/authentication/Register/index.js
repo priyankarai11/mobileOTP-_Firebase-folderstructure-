@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NewUser from "../../../components/newUser";
 import { db } from "../../../services/firebase/config";
-import { EMAIL_ERROR, EMAIL_REGEX } from "./constant";
+import { EMAIL_ERROR, EMAIL_REGEX, NAME_ERROR, PHONE_ERROR } from "./constant";
 
 function Register() {
   const navigate = useNavigate();
@@ -34,14 +34,14 @@ function Register() {
         if (value.length > 0) {
           setHelperTextName("");
         } else {
-          setHelperTextName("Please Enter valid name");
+          setHelperTextName(NAME_ERROR);
         }
         break;
       case "mobile":
         if (value.length > 0 && value.length === 10) {
           setHelperTextMobile("");
         } else {
-          setHelperTextMobile("Please Enter valid mobile number");
+          setHelperTextMobile(PHONE_ERROR);
         }
         break;
       case "email":

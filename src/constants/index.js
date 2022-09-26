@@ -8,4 +8,6 @@ export const TOAST="User Not Found"
 
 export const EMAIL_ERROR = "Enter a valid valid email address";
 
-export const PHONE_ERROR="Please Enter valid Phone number"
+export const PHONE_ERROR = "Please Enter valid Phone number"
+
+export const NAME_ERROR="Please Enter valid name"
