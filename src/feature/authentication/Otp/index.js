@@ -8,6 +8,7 @@ import Otp from "../../../components/otp_Page";
 function Index({ userRole }) {
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
+  
   const handleChange = (otp) => setOtp(otp);
 
   const validateOtp = () => {

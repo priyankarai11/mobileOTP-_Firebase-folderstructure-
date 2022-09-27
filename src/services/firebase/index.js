@@ -31,7 +31,7 @@ function verifyOtp(otp, navigate) {
         .confirm(otp)
         .then(() => {
           resolve("Otp is verified by user");
-          localStorage.setItem("checkNumber", true);
+          localStorage.setItem("checkNumber", otp);
           navigate("/dashboard");
         })
         .catch(() => {
