@@ -1,12 +1,12 @@
 /** @format */
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AuthProvider } from "../../contexts/AuthContext";
-import LoginPage from "../../feature/authentication/Login";
-import Dashboard from "../../feature/home/Dashboard";
-import { PrivateRoute } from "./privateRoute";
-import { PublicRoute } from "./publicRoute";
-import NotFoundPage from "../notFound/notFound";
+import { AuthProvider } from "./contexts/AuthContext";
+import LoginPage from "./feature/authentication/Login";
+import Dashboard from "./feature/home/Dashboard";
+import { PrivateRoute } from "./components/routes/privateRoute";
+import { PublicRoute } from "./components/routes/publicRoute";
+import NotFoundPage from "./components/notFound/notFound";
 //import NewUser from "../newUser";
 
 function App() {
