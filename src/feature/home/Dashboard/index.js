@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../../services/firebase";
 import WelcomePage from "../../../components/welcomePage";

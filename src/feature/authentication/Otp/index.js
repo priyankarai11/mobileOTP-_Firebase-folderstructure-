@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import {
   verifyOtp,
   firebaseVerifier,
-  getTokenId,
 } from "../../../services/firebase";
 import Otp from "../../../components/otpPage";
 

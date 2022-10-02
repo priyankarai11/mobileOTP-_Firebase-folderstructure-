@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { firebase } from "../services/firebase/config";
-import { AuthContextProvider } from "./";
+import { AuthContextProvider } from ".";
 
 function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
