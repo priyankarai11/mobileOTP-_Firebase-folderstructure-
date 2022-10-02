@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  verifyOtp,
-  firebaseVerifier,
-} from "../../../services/firebase";
+import { verifyOtp, firebaseVerifier } from "../../../services/firebase";
 import Otp from "../../../components/otpPage";
 
 function Index({ userRole }) {
@@ -17,7 +14,7 @@ function Index({ userRole }) {
   const validateOtp = () => {
     if (otp === null || firebaseVerifier === null) return;
     verifyOtp(otp, navigate);
-    localStorage.setItem("role", userRole);
+    localStorage.setItem("role",userRole)
   };
 
   return (

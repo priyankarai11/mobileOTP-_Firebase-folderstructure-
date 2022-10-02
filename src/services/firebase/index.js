@@ -48,9 +48,4 @@ function logout() {
   return firebase.auth().signOut();
 }
 
-export {
-  signInWithMobileNumber,
-  verifyOtp,
-  firebaseVerifier,
-  logout,
-};
+export { signInWithMobileNumber, verifyOtp, firebaseVerifier, logout };

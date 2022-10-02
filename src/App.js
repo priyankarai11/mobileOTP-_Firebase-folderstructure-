@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import LoginPage from "./feature/authentication/Login";
 import Dashboard from "./feature/home/Dashboard";
-import { PrivateRoute } from "./components/routes/privateRoute";
 import { PublicRoute } from "./components/routes/publicRoute";
+import { PrivateRoute } from "./components/routes/privateRoute";
 import NotFoundPage from "./components/notFound/notFound";
 //import NewUser from "../newUser";
 
