@@ -2,13 +2,17 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { verifyOtp, firebaseVerifier } from "../../../services/firebase";
-import Otp from "../../../components/otp_Page";
+import {
+  verifyOtp,
+  firebaseVerifier,
+  getTokenId,
+} from "../../../services/firebase";
+import Otp from "../../../components/otpPage";
 
 function Index({ userRole }) {
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
-  
+
   const handleChange = (otp) => setOtp(otp);
 
   const validateOtp = () => {

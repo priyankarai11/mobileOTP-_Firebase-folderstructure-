@@ -2,10 +2,9 @@
 
 import React from "react";
 import { Button } from "@material-ui/core";
-import { useNavigate } from "react-router-dom";
 import { useStyles } from "./style";
 
-function WelcomePage({ logOut }) {
+function WelcomePage({ handleLogout }) {
   const classes = useStyles();
   const userRole = localStorage.getItem("role");
 
@@ -14,7 +13,7 @@ function WelcomePage({ logOut }) {
       <div className={classes.dashboardText}>
         Dashboard of <strong className={classes.userRole}> {userRole} </strong>
       </div>
-      <Button className={classes.logOut} onClick={logOut}>
+      <Button className={classes.logOut} onClick={handleLogout}>
         Logout
       </Button>
     </div>

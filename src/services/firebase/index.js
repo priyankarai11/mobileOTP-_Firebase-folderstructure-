@@ -29,9 +29,9 @@ function verifyOtp(otp, navigate) {
     if (firebaseVerifier) {
       firebaseVerifier
         .confirm(otp)
-        .then(() => {
+        .then((res) => {
+          console.log(res);
           resolve("Otp is verified by user");
-          localStorage.setItem("checkNumber", otp);
           navigate("/dashboard");
         })
         .catch(() => {
@@ -39,10 +39,18 @@ function verifyOtp(otp, navigate) {
         });
     }
   });
-
   promise
     .then((message) => console.log(message))
     .catch((message) => console.log(message));
 }
 
-export { signInWithMobileNumber, verifyOtp, firebaseVerifier };
+function logout() {
+  return firebase.auth().signOut();
+}
+
+export {
+  signInWithMobileNumber,
+  verifyOtp,
+  firebaseVerifier,
+  logout,
+};

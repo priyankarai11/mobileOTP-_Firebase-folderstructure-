@@ -1,14 +1,12 @@
 /** @format */
-
-// /** @format */
-
-import React from "react";
-import { Navigate , Outlet} from "react-router";
+import { useContext } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { AuthContext } from "../../contexts";
 
 function PrivateRoute() {
-  const auth = localStorage.getItem("checkNumber");
-  return auth ? <Outlet/> : <Navigate replace to="/" />
-
+  const currentUser = useContext(AuthContext);
+  console.log("private", currentUser);
+  return currentUser ? <Outlet /> : <Navigate replace to="/" />;
 }
 
 export { PrivateRoute };
