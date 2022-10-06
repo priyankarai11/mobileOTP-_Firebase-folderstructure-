@@ -8,18 +8,16 @@ function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
-    (async function () {
-      firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-          firebase
-            .auth()
-            .currentUser.getIdToken()
-            .then((token) => setCurrentUser(token));
-        } else {
-          setCurrentUser();
-        }
-      });
-    })();
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        firebase
+          .auth()
+          .currentUser.getIdToken()
+          .then((token) => setCurrentUser(token));
+      } else {
+        setCurrentUser();
+      }
+    });
   }, []);
 
   return (
