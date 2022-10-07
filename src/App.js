@@ -7,6 +7,8 @@ import Dashboard from "./feature/home/Dashboard";
 import { PublicRoute } from "./components/routes/publicRoute";
 import { PrivateRoute } from "./components/routes/privateRoute";
 import NotFoundPage from "./components/notFound/notFound";
+import ProfilePage from "./feature/profile";
+import SettingPage from "./feature/setting";
 //import NewUser from "../newUser";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           </Route>
           <Route element={<PrivateRoute />}>
             <Route element={<Dashboard />} path="/dashboard" />
+            <Route element={<ProfilePage />} path="/dashboard" />
+            <Route element={<SettingPage />} path="/dashboard" />
           </Route>
 
           <Route path="/*" element={<NotFoundPage />} />

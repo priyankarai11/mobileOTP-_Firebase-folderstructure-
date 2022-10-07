@@ -14,7 +14,7 @@ function Index({ userRole }) {
   const validateOtp = () => {
     if (otp === null || firebaseVerifier === null) return;
     verifyOtp(otp, navigate);
-    localStorage.setItem("role",userRole)
+    localStorage.setItem("role", userRole);
   };
 
   return (
