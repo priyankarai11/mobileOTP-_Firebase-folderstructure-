@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { SideBar } from "../../nav/sideBar";
+import { SideBar } from "../navigation/sideBar";
 import { SummaryCard } from "../widgets/summaryCard";
 import { SoftDashboard } from "../widgets/softDashboard";
 import { WorkWithRockets } from "../widgets/workWithRockets";

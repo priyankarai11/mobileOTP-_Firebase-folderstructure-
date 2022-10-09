@@ -3,7 +3,7 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../services/firebase";
+import { logout } from "../../../services/firebase";
 import { DiamondShape } from "../diamondMask";
 import { MENU } from "./constant";
 import { useStyles } from "./style";
