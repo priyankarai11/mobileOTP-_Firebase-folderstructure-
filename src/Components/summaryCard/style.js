@@ -18,6 +18,11 @@ export const useStyles = makeStyles({
     justifyContent: "space-evenly",
   },
 
+  right: {
+    marginTop: 6,
+    display: "flex",
+  },
+
   title: {
     color: "#67748E",
     fontSize: 14,
@@ -36,6 +41,7 @@ export const useStyles = makeStyles({
     color: "#82D616",
     fontSize: 14,
     fontWeight: 700,
+    marginLeft: 5,
     fontFamily: "Inter, sans-serif",
   },
 });

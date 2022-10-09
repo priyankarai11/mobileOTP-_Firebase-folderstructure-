@@ -9,6 +9,8 @@ import { SoftDashboard } from "../softDashboard";
 import { WorkWithRockets } from "../workWithRockets";
 import { ActiveUsers } from "../activeUsers";
 import { SalesOverview } from "../salesOverview";
+import { Project } from "../projects";
+import { MyActitvity } from "../myActivity";
 
 function WelcomePage() {
   const classes = useStyles();
@@ -19,13 +21,17 @@ function WelcomePage() {
         <div className={classes.widgets}>
           <SummaryCard />
         </div>
-        <div className={classes.softDashboard}>
+        <div className={classes.widgets}>
           <SoftDashboard />
           <WorkWithRockets />
         </div>
-        <div className={classes.chartSection}>
+        <div className={classes.widgets}>
           <ActiveUsers />
           <SalesOverview />
+        </div>
+        <div className={classes.widgets}>
+          <Project />
+          <MyActitvity />
         </div>
       </div>
     </div>

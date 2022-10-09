@@ -6,7 +6,7 @@ export const useStyles = makeStyles({
   workWithRockets: {
     position: "relative",
     flex: 4,
-    marginLeft: 50,
+   // marginLeft: 50,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: 10,
   },
@@ -27,14 +27,14 @@ export const useStyles = makeStyles({
     left: 65,
     width: "66%",
     color: "#ffffff",
-    fontWeight: 400,
+    lineHeight: 1.7,
     fontSize: 16,
     fontFamily: "Inter, sans-serif",
   },
 
   readMore: {
     position: "absolute",
-    bottom: 51,
+    bottom: 30,
     left: 65,
     color: "#ffffff",
     fontWeight: 600,
@@ -49,7 +49,7 @@ export const useStyles = makeStyles({
   arrow: {
     position: "absolute",
     left: 140,
-    bottom: 48,
+    bottom: 27,
     color: "#ffffff",
     width: 19,
   },

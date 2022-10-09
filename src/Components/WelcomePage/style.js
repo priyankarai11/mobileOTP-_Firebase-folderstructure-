@@ -9,21 +9,10 @@ export const useStyles = makeStyles({
 
   homeContainer: {
     flex: 5,
+    marginTop: 40,
   },
 
   widgets: {
-    display: "flex",
-    padding: 20,
-    gap: 20,
-  },
-
-  softDashboard: {
-    display: "flex",
-    padding: 20,
-    gap: 20,
-  },
-
-  chartSection: {
     display: "flex",
     padding: 20,
     gap: 20,

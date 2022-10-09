@@ -41,11 +41,11 @@ export const useStyles = makeStyles({
   },
 
   info: {
-    width: 275,
+    width: 320,
     color: "#67748E",
     fontFamily: "Inter, sans-serif",
     fontWeight: 400,
-    fontSize: 14,
+    fontSize: 16,
     fontStyle: "normal",
     lineHeight: 2,
   },
