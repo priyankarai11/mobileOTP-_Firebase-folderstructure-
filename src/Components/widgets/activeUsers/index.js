@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { BarChart } from "../charts/barChart";
+import { BarChart } from "../../charts/barChart";
 import { useStyles } from "./style";
 
 function ActiveUsers() {

@@ -2,7 +2,7 @@
 
 import React from "react";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import { LineChart } from "../charts/lineChart";
+import { LineChart } from "../../charts/lineChart";
 import { useStyles } from "./style";
 
 function SalesOverview() {

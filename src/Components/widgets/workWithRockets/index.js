@@ -2,7 +2,7 @@
 
 import React from "react";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import InfoCard from "../../assets/images/infoCard.svg";
+import InfoCard from "../../../assets/images/infoCard.svg";
 import { useStyles } from "./style";
 
 function WorkWithRockets() {

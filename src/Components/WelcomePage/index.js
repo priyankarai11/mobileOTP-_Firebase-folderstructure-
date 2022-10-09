@@ -1,16 +1,15 @@
 /** @format */
 
 import React from "react";
-import { SideBar } from "../sideBar";
-import { Nav } from "../nav";
+import { SideBar } from "../../nav/sideBar";
+import { SummaryCard } from "../widgets/summaryCard";
+import { SoftDashboard } from "../widgets/softDashboard";
+import { WorkWithRockets } from "../widgets/workWithRockets";
+import { ActiveUsers } from "../widgets/activeUsers";
+import { SalesOverview } from "../widgets/salesOverview";
+import { Project } from "../widgets/projects";
+import { MyActitvity } from "../widgets/myActivity";
 import { useStyles } from "./style";
-import { SummaryCard } from "../summaryCard";
-import { SoftDashboard } from "../softDashboard";
-import { WorkWithRockets } from "../workWithRockets";
-import { ActiveUsers } from "../activeUsers";
-import { SalesOverview } from "../salesOverview";
-import { Project } from "../projects";
-import { MyActitvity } from "../myActivity";
 
 function WelcomePage() {
   const classes = useStyles();

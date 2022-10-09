@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { PieChart } from "../charts/pieCharts";
+import { PieChart } from "../../charts/pieCharts";
 import { useStyles } from "./style";
 
 function MyActitvity() {

@@ -1,6 +1,6 @@
 /** @format */
 
-import Dollar from "../../assets/images/dollar.svg";
+import Dollar from "../../../assets/images/dollar.svg";
 
 const DETAILS = [
   {

@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import RocketImage from "../../assets/images/rocket.svg"
+import RocketImage from "../../../assets/images/rocket.svg";
 import { useStyles } from "./style";
 
 function SoftDashboard() {
@@ -16,9 +16,9 @@ function SoftDashboard() {
           full documentation.
         </span>
       </div>
-      
+
       <div className={classes.right}>
-              <img className={classes.rocket} src={RocketImage} alt="dollar" />
+        <img className={classes.rocket} src={RocketImage} alt="dollar" />
       </div>
     </div>
   );
