@@ -21,4 +21,14 @@ export const useStyles = makeStyles({
     width: 20,
     height: 20,
   },
+
+  settings: {
+    position: "absolute",
+    left: 430,
+    top: 450,
+    padding: 10,
+    background: "#ffffff",
+    borderRadius: 24,
+    boxShadow: "2px 4px 10px 1px rgb(145 93 93/47%)",
+  },
 });

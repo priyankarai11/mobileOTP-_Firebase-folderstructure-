@@ -70,7 +70,7 @@ export const useStyles = makeStyles({
     fontWeight: 400,
     fontFamily: "Inter, sans-serif",
     fontStyle: "normal",
-    padding: 14,
+    padding: 12,
     cursor: "pointer",
     display: "flex",
     alignItems: "center",

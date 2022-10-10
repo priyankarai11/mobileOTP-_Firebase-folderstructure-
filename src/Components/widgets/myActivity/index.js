@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { ArrowForwardIosSharp } from "@material-ui/icons";
+import { ArrowForwardIosSharp, Settings } from "@material-ui/icons";
 import { PieChart } from "../../charts/pieCharts";
 import { useStyles } from "./style";
 
@@ -13,6 +13,7 @@ function MyActitvity() {
         <PieChart />
       </div>
       <ArrowForwardIosSharp className={classes.arrow} />
+      <Settings className={classes.settings} />
     </div>
   );
 }
