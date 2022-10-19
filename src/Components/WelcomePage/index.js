@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { SideBar } from "../navigation/sideBar";
 import { SummaryCard } from "../widgets/summaryCard";
 import { SoftDashboard } from "../widgets/softDashboard";
@@ -21,26 +21,30 @@ function WelcomePage() {
         <div className={classes.widgets}>
           <SummaryCard />
         </div>
-        <Grid container spacing={3}>
-          <Grid item xs={7} md={7}>
+        <Box className={classes.boxConatiner} gap={2}>
+          <Box gridColumn="span 7">
             <SoftDashboard />
-          </Grid>
-          <Grid item>
+          </Box>
+          <Box gridColumn="span 5">
             <WorkWithRockets />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+        </Box>
+        <Box className={classes.activeAndSalesConatiner} gap={3}>
+          <Box gridColumn="span 6">
             <ActiveUsers />
-          </Grid>
-          <Grid item xs={6}>
+          </Box>
+          <Box gridColumn="span 6">
             <SalesOverview />
-          </Grid>
-          <Grid item xs={7}>
+          </Box>
+        </Box>
+        <Box className={classes.projectAndActivity} gap={3}>
+          <Box gridColumn="span 7">
             <Project />
-          </Grid>
-          <Grid item xs={5}>
+          </Box>
+          <Box gridColumn="span 5">
             <MyActitvity />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </div>
     </div>
   );

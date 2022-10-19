@@ -7,6 +7,13 @@ export const useStyles = makeStyles({
     flex: 6,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: 15,
+    marginLeft: 20,
+    marginRight: 20,
+    overflowX: "scroll",
+    height: 393,
+    "@media (max-width: 590px)": {
+      marginRight: 10,
+    },
   },
 
   projectContainer: {

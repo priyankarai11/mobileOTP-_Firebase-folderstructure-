@@ -22,6 +22,9 @@ function ProgressBarLineComp({ value, max }) {
           fill: "#000000",
           textAlign: "center",
           fontSize: "32px",
+          "@media (max-width: 1172px) and (min-width:991px)": {
+            fontSize: "22px",
+          },
         },
       }}
     />

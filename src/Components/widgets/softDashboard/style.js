@@ -8,18 +8,28 @@ export const useStyles = makeStyles({
     justifyContent: "space-around",
     flex: 6,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
-    padding: 20,
+    padding: 10,
     marginLeft: 20,
+    "@media (max-width: 590px ) ": {
+      flexDirection: "column",
+    },
   },
 
   left: {
-    display: "flex",
+    // display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
     width: "50%",
     padding: 20,
     // margin: 20,
     // width: 217,
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
+    "@media (max-width: 1120px)": {
+      width: "65%",
+    },
   },
 
   right: {

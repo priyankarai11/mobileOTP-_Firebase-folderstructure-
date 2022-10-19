@@ -1,5 +1,6 @@
 /** @format */
 
+import InfoCard from "../../../assets/images/infoCard.svg";
 import { makeStyles } from "@material-ui/styles";
 
 export const useStyles = makeStyles({
@@ -9,6 +10,18 @@ export const useStyles = makeStyles({
     marginLeft: 20,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: "10px 20px",
+    height: "92%",
+    backgroundImage: `url(${InfoCard})`,
+    backgroundSize: "cover",
+    borderRadius: "0.75rem",
+    "@media (max-width: 991px)": {
+      height: "250%",
+      marginTop: 50,
+    },
+    "@media (max-width: 690px)": {
+      height: "320%",
+      marginTop: 50,
+    },
   },
 
   title: {
@@ -44,10 +57,10 @@ export const useStyles = makeStyles({
 
   infoCard: {
     // marginLeft: 25,
-    margin: "auto",
-    display: "block",
-    maxWidth: "100%",
-    maxHeight: "100%",
+    // margin: "auto",
+    // display: "block",
+    // maxWidth: "100%",
+    // maxHeight: "100%",
   },
 
   arrow: {
@@ -58,5 +71,4 @@ export const useStyles = makeStyles({
     width: 19,
   },
 
-  img: {},
 });

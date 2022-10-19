@@ -8,6 +8,12 @@ export const useStyles = makeStyles({
     flex: 5,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: 10,
+    "@media (max-width: 991px ) ": {
+      margin: 20,
+    },
+    "@media (max-width: 690px ) ": {
+      margin: 20,
+    },
   },
 
   salesContainer: {
@@ -61,5 +67,8 @@ export const useStyles = makeStyles({
 
   lineChart: {
     marginTop: 90,
+    "@media (max-width: 991px ) ": {
+      marginTop: 30,
+    },
   },
 });

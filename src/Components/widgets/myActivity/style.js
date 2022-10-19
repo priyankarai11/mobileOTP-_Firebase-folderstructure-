@@ -8,6 +8,10 @@ export const useStyles = makeStyles({
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: 10,
     position: "relative",
+    margin: 20,
+    "@media (max-width: 590px)": {
+      marginRight: 0,
+    },
   },
 
   arrow: {
@@ -24,8 +28,9 @@ export const useStyles = makeStyles({
 
   settings: {
     position: "absolute",
-    left: 465,
     top: 395,
+    right: -5,
+
     padding: 10,
     background: "#ffffff",
     borderRadius: 24,

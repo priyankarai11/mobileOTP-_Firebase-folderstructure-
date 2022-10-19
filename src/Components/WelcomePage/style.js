@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
   },
 
   homeContainer: {
-   // flex: 5,
+    flex: 5,
     marginTop: 40,
   },
 
@@ -27,17 +27,34 @@ export const useStyles = makeStyles({
     },
   },
 
-  softandWorkWithRockets: {
-    display: "flex",
-    padding: 20,
-    gap: 20,
-    "@media (max-width: 1170px)": {
-      display: "grid",
-      gridTemplateRows: "repeat(2, 1fr)",
+  boxConatiner: {
+    display: "grid",
+    gridTemplateColumns: "repeat(12, 1fr)",
+    "@media (max-width: 991px)": {
+      gridTemplateColumns: "repeat(1, 1fr)",
     },
-    "@media (max-width: 962px)": {
-      display: "grid",
-      gridTemplateRows: "repeat(1, 1fr)",
+  },
+
+  activeAndSalesConatiner: {
+    marginTop: 50,
+    display: "grid",
+    gridTemplateColumns: "repeat(12, 1fr)",
+    "@media (max-width:991px)": {
+      marginTop: 200,
+      gridTemplateColumns: "repeat(1, 1fr)",
+    },
+    "@media (max-width:690px)": {
+      marginTop: 250,
+      gridTemplateColumns: "repeat(1, 1fr)",
+    },
+  },
+
+  projectAndActivity: {
+    marginTop: 30,
+    display: "grid",
+    gridTemplateColumns: "repeat(12, 1fr)",
+    "@media (max-width:991px)": {
+      gridTemplateColumns: "repeat(1, 1fr)",
     },
   },
 });
