@@ -6,9 +6,9 @@ export const useStyles = makeStyles({
   workWithRockets: {
     position: "relative",
     flex: 4,
-   // marginLeft: 50,
+    marginLeft: 20,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
-    padding: 10,
+    padding: "10px 20px",
   },
 
   title: {
@@ -43,7 +43,11 @@ export const useStyles = makeStyles({
   },
 
   infoCard: {
-    marginLeft: 25,
+    // marginLeft: 25,
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
 
   arrow: {
@@ -53,4 +57,6 @@ export const useStyles = makeStyles({
     color: "#ffffff",
     width: 19,
   },
+
+  img: {},
 });

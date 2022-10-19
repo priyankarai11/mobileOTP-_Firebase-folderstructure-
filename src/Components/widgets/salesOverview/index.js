@@ -11,9 +11,11 @@ function SalesOverview() {
     <div className={classes.salesOverview}>
       <div className={classes.salesContainer}>
         <span className={classes.overview}>Sales Overview</span>
-        <ArrowUpwardIcon className={classes.arrow} />
+
         <span className={classes.percentage}>
-          4% more <span className={classes.year}>in 2021</span>
+          <ArrowUpwardIcon className={classes.arrow} />
+          <span className={classes.more}>4% more</span>
+          <span className={classes.year}>in 2021</span>
         </span>
       </div>
       <div className={classes.lineChart}>

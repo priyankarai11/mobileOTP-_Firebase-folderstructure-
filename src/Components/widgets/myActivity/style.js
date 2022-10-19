@@ -24,8 +24,8 @@ export const useStyles = makeStyles({
 
   settings: {
     position: "absolute",
-    left: 430,
-    top: 450,
+    left: 465,
+    top: 395,
     padding: 10,
     background: "#ffffff",
     borderRadius: 24,

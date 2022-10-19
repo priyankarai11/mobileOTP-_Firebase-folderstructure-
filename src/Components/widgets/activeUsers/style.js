@@ -7,6 +7,7 @@ export const useStyles = makeStyles({
     flex: 4,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
     padding: 10,
+    marginLeft: 20,
   },
 
   userActivity: {
@@ -35,5 +36,51 @@ export const useStyles = makeStyles({
     fontSize: 14,
     fontWeight: 400,
     fontFamily: "Inter, sans-serif",
+  },
+
+  //ProgressCheck
+
+  progressCheck: {
+    marginTop: 20,
+    display: "flex",
+    "@media (max-width: 1232px)": {
+      display: "grid",
+      marginTop: 40,
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+    "@media (max-width: 853px)": {
+      display: "grid",
+      marginTop: 40,
+      gridTemplateColumns: "repeat(1, 1fr)",
+    },
+  },
+
+  mainContainer: {
+    "@media (max-width: 1270px)": {
+      marginTop: 20,
+    },
+  },
+
+  progressContainer: {
+    display: "flex",
+  },
+
+  logo: {
+    marginRight: 4,
+  },
+
+  title: {
+    color: "#67748E",
+    fontSize: 14,
+    fontWeight: 600,
+    fontFamily: "Inter, sans-serif",
+    marginRight: 60,
+  },
+
+  //PROGRESS BAR LINE
+
+  progressBarLine: {
+    width: 80,
+    marginLeft: 4,
   },
 });

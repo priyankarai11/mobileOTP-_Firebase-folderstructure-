@@ -2,7 +2,8 @@
 
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+import { Menu } from "@material-ui/icons";
 import { logout } from "../../../services/firebase";
 import { DiamondShape } from "../diamondMask";
 import { MENU } from "./constant";
@@ -10,11 +11,16 @@ import { useStyles } from "./style";
 
 function SideBar() {
   const [active, setActive] = useState(1);
+  const [open, setopen] = useState(true);
   const classes = useStyles();
   const navigate = useNavigate();
 
   const handleActiveState = (id) => {
     setActive(id);
+  };
+
+  const toggleOpen = () => {
+    setopen(!open);
   };
 
   async function handleLogOut() {
@@ -28,14 +34,17 @@ function SideBar() {
   }
 
   return (
-    <div className={classes.sidebar}>
+    <div className={open ? classes.sidebar : classes.sidenavClosed}>
       <div className={classes.sideBarMenu}>
-        <h3 className={classes.sidebarTitleHeader}>USER Dashboard</h3>
+        <div className={classes.menuSection}>
+          <Menu className={classes.menuBtn} onClick={toggleOpen} />
+          {open && <h3 className={classes.sidebarTitleHeader}>Dashboard</h3>}
+        </div>
         <hr className={classes.line} />
         <ul className={classes.sidebarList}>
           {MENU.map((ele) => {
             return (
-              <div>
+              <NavLink key={ele.id} className={classes.sideitem}>
                 <li
                   className={
                     ele.id === active
@@ -53,22 +62,24 @@ function SideBar() {
                   >
                     {ele.logo}
                   </span>
-                  {ele.name}
+                  {open && ele.name}
                 </li>
-                {ele.id === 4 ? (
+                {open && ele.id === 4 ? (
                   <h3 className={classes.sidebarTitle}>ACCOUNT SETTING</h3>
                 ) : (
                   ""
                 )}
-              </div>
+              </NavLink>
             );
           })}
         </ul>
-        <Button className={classes.logOut} onClick={handleLogOut}>
-          LogOut
-        </Button>
+        {open && (
+          <Button className={classes.logOut} onClick={handleLogOut}>
+            LogOut
+          </Button>
+        )}
       </div>
-      <DiamondShape />
+      {open && <DiamondShape />}
     </div>
   );
 }

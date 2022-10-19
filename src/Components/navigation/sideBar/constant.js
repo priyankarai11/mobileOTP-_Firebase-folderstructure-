@@ -31,6 +31,7 @@ export const MENU = [
     id: 4,
     logo: <LocalGroceryStore />,
     name: "store",
+    text:"ACCOUNT SETTING"
   },
   {
     id: 5,

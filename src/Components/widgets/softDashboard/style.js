@@ -8,7 +8,8 @@ export const useStyles = makeStyles({
     justifyContent: "space-around",
     flex: 6,
     boxShadow: "2px 4px 10px 1px rgb(201 201 201 / 47%)",
-    padding: 10,
+    padding: 20,
+    marginLeft: 20,
   },
 
   left: {
@@ -52,5 +53,16 @@ export const useStyles = makeStyles({
 
   rocket: {
     // width: "100%",
+  },
+
+  img: {
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
+  },
+
+  item: {
+    marginTop: 20,
   },
 });

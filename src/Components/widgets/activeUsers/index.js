@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import { Grid } from "@material-ui/core";
+import { ProgressCheck } from "./progressCheck";
 import { BarChart } from "../../charts/barChart";
 import { useStyles } from "./style";
 
@@ -8,13 +10,19 @@ function ActiveUsers() {
   const classes = useStyles();
   return (
     <div className={classes.activeUsers}>
-      <BarChart />
-      <div className={classes.userActivity}>
-        <span className={classes.active}>Active Users</span>
-        <span className={classes.percentage}>
-          (+23%) <span className={classes.lastWeek}>than last week</span>
-        </span>
-      </div>
+      <Grid container spacing={6}>
+        <Grid item xs={12} sm container>
+          <BarChart />
+          <div className={classes.userActivity}>
+            <span className={classes.active}>Active Users</span>
+            <span className={classes.percentage}>
+              (+23%) <span className={classes.lastWeek}>than last week</span>
+            </span>
+          </div>
+
+          <ProgressCheck />
+        </Grid>
+      </Grid>
     </div>
   );
 }

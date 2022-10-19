@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
   },
 
   homeContainer: {
-    flex: 5,
+   // flex: 5,
     marginTop: 40,
   },
 
@@ -17,5 +17,27 @@ export const useStyles = makeStyles({
     display: "flex",
     padding: 20,
     gap: 20,
+    "@media (max-width: 1170px)": {
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+    "@media (max-width: 740px)": {
+      display: "grid",
+      gridTemplateColumns: "repeat(1, 1fr)",
+    },
+  },
+
+  softandWorkWithRockets: {
+    display: "flex",
+    padding: 20,
+    gap: 20,
+    "@media (max-width: 1170px)": {
+      display: "grid",
+      gridTemplateRows: "repeat(2, 1fr)",
+    },
+    "@media (max-width: 962px)": {
+      display: "grid",
+      gridTemplateRows: "repeat(1, 1fr)",
+    },
   },
 });

@@ -20,15 +20,21 @@ export const useStyles = makeStyles({
   },
 
   sidebarTitleHeader: {
-    fontSize: 14,
-    fontWeight: 600,
+    //fontSize: 14,
+    //fontWeight: 600,
     fontFamily: "Inter, sans-serif",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontStyle: "normal",
-    marginBottom: 20,
-    color: "#141414",
+    marginTop: 2,
+    marginLeft: 10,
+    color: "#003865",
+  },
+
+  menuSection: {
+    display: "flex",
+    justifyContent: "flex-start",
   },
 
   line: {
@@ -100,7 +106,7 @@ export const useStyles = makeStyles({
   },
 
   logOut: {
-    marginLeft:20,
+    marginLeft: 20,
     width: 150,
     borderRadius: 8,
     color: "#ffffff",
@@ -108,5 +114,38 @@ export const useStyles = makeStyles({
     fontSize: 12,
     fontWeight: 700,
     fontFamily: "Inter, sans-serif",
+  },
+
+  sidenavClosed: {
+    composes: "sidebar",
+    transition: "width 0.3s ease-in-out",
+    width: 60,
+    height: 500,
+    backgroundColor: "white",
+    borderRadius: 16,
+    padding: 20,
+    boxShadow: "0px 20px 27px rgb(201 201 201 / 47%)",
+  },
+
+  sideitem: {
+    cursor: "pointer",
+    color: "#B2BAC2",
+    textDecoration: "none",
+    overflow: "hidden",
+  },
+
+  linkText: {
+    paddingLeft: 16,
+  },
+
+  menuBtn: {
+    alignSelf: "center",
+    alignSelf: "flex-start",
+    justifySelf: "flex-end",
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
+    paddingLeft: 20,
+    color: "#003865",
   },
 });

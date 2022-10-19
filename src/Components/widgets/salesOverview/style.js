@@ -26,20 +26,30 @@ export const useStyles = makeStyles({
 
   arrow: {
     color: "green",
-    marginTop: 5,
+    marginTop: -5,
     marginLeft: 5,
     width: 20,
   },
 
+  more: { marginRight: 5 },
+  // percentage: {
+  //   marginTop: 3,
+  //   position: "absolute",
+  //   color: "#67748E",
+  //   right: 475,
+  //   top: 26,
+  //   fontSize: 14,
+  //   fontWeight: 600,
+  //   fontFamily: "Inter, sans-serif",
+  // },
+
   percentage: {
-    marginTop: 3,
-    position: "absolute",
+    marginTop: 17,
     color: "#67748E",
-    right: 475,
-    top: 26,
     fontSize: 14,
-    fontWeight: 600,
+    fontWeight: 700,
     fontFamily: "Inter, sans-serif",
+    display: "flex",
   },
 
   year: {
@@ -50,6 +60,6 @@ export const useStyles = makeStyles({
   },
 
   lineChart: {
-    marginTop: 65,
+    marginTop: 90,
   },
 });
