@@ -19,7 +19,7 @@ export const useStyles = makeStyles({
     // display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
-    width: "50%",
+    width: "48%",
     padding: 20,
     // margin: 20,
     // width: 217,

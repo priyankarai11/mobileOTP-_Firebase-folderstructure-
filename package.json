@@ -29,6 +29,7 @@
     "react-loading-overlay": "^1.0.1",
     "react-otp-input": "^2.4.0",
     "react-progressbar-line": "^1.0.2",
+    "react-responsive-sidebar": "^0.1.16",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "react-svg-piechart": "^2.4.2",

@@ -13,6 +13,9 @@ export const useStyles = makeStyles({
     backgroundColor: "white",
     borderRadius: 16,
     padding: 20,
+    "@media (max-width: 588px)": {
+      position: "absolute",
+    },
   },
 
   sidebarMenu: {
@@ -147,5 +150,8 @@ export const useStyles = makeStyles({
     cursor: "pointer",
     paddingLeft: 20,
     color: "#003865",
+    "@media (max-width: 991px)": {
+      transform: "translateX(0)",
+    },
   },
 });

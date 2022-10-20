@@ -1,7 +1,7 @@
 /** @format */
 
 import { Button } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Menu } from "@material-ui/icons";
 import { logout } from "../../../services/firebase";
@@ -11,7 +11,7 @@ import { useStyles } from "./style";
 
 function SideBar() {
   const [active, setActive] = useState(1);
-  const [open, setopen] = useState(true);
+  const [open, setOpen] = useState(false);
   const classes = useStyles();
   const navigate = useNavigate();
 
@@ -20,8 +20,22 @@ function SideBar() {
   };
 
   const toggleOpen = () => {
-    setopen(!open);
+    setOpen(!open);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 991) {
+        setOpen(true);
+      } else {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   async function handleLogOut() {
     try {
@@ -34,11 +48,11 @@ function SideBar() {
   }
 
   return (
-    <div className={open ? classes.sidebar : classes.sidenavClosed}>
+    <div className={!open ? classes.sidebar : classes.sidenavClosed}>
       <div className={classes.sideBarMenu}>
         <div className={classes.menuSection}>
           <Menu className={classes.menuBtn} onClick={toggleOpen} />
-          {open && <h3 className={classes.sidebarTitleHeader}>Dashboard</h3>}
+          {!open && <h3 className={classes.sidebarTitleHeader}>Dashboard</h3>}
         </div>
         <hr className={classes.line} />
         <ul className={classes.sidebarList}>
@@ -62,9 +76,9 @@ function SideBar() {
                   >
                     {ele.logo}
                   </span>
-                  {open && ele.name}
+                  {!open && ele.name}
                 </li>
-                {open && ele.id === 4 ? (
+                {!open && ele.id === 4 ? (
                   <h3 className={classes.sidebarTitle}>ACCOUNT SETTING</h3>
                 ) : (
                   ""
@@ -73,13 +87,13 @@ function SideBar() {
             );
           })}
         </ul>
-        {open && (
+        {!open && (
           <Button className={classes.logOut} onClick={handleLogOut}>
             LogOut
           </Button>
         )}
       </div>
-      {open && <DiamondShape />}
+      {!open && <DiamondShape />}
     </div>
   );
 }

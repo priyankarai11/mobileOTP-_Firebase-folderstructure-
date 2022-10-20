@@ -38,7 +38,7 @@ export const useStyles = makeStyles({
     position: "absolute",
     top: 70,
     left: 65,
-    width: "66%",
+    width: "70%",
     color: "#ffffff",
     lineHeight: 1.7,
     fontSize: 16,
