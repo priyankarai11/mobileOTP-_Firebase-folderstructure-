@@ -12,6 +12,7 @@ import { useStyles } from "./style";
 function SideBar() {
   const [active, setActive] = useState(1);
   const [open, setOpen] = useState(false);
+  const [sidebar, setSideOpen] = useState(false);
   const classes = useStyles();
   const navigate = useNavigate();
 
@@ -27,8 +28,10 @@ function SideBar() {
     const handleResize = () => {
       if (window.innerWidth < 991) {
         setOpen(true);
+        setSideOpen(true);
       } else {
         setOpen(false);
+        setSideOpen(false);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -51,7 +54,7 @@ function SideBar() {
     <div className={!open ? classes.sidebar : classes.sidenavClosed}>
       <div className={classes.sideBarMenu}>
         <div className={classes.menuSection}>
-          <Menu className={classes.menuBtn} onClick={toggleOpen} />
+          {sidebar && <Menu className={classes.menuBtn} onClick={toggleOpen} />}
           {!open && <h3 className={classes.sidebarTitleHeader}>Dashboard</h3>}
         </div>
         <hr className={classes.line} />

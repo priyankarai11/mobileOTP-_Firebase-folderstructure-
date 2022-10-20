@@ -31,8 +31,11 @@ export const useStyles = makeStyles({
     justifyContent: "center",
     fontStyle: "normal",
     marginTop: 2,
-    marginLeft: 10,
+    marginLeft: 60,
     color: "#003865",
+    "@media (max-width: 991px)": {
+      marginLeft: 10,
+    },
   },
 
   menuSection: {
